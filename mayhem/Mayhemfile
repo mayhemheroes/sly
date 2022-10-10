@@ -1,5 +1,7 @@
 project: sly
 target: parser-fuzz
+testsuite:
+    - file://mayhem/testsuite
 
 cmds:
   - cmd: /src/mayhem/fuzz_parser.py

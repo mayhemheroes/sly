@@ -75,7 +75,10 @@ class CalcParser(Parser):
 
     @_('expr DIVIDE expr')
     def expr(self, p):
-        return p.expr0 / p.expr1
+        try:
+            return p.expr0 / p.expr1
+        except ZeroDivisionError:
+            return 0
 
     @_('MINUS expr %prec UMINUS')
     def expr(self, p):
