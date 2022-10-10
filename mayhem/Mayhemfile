@@ -1,0 +1,6 @@
+project: sly
+target: parser-fuzz
+
+cmds:
+  - cmd: /src/mayhem/fuzz_parser.py
+    libfuzzer: true
